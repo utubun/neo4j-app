@@ -30,6 +30,8 @@ describe('02. Movie Lists', () => {
 
         const output = await service.all('title', 'ASC', limit)
 
+        console.log(output);
+
         expect(output).toBeDefined()
         expect(output.length).toEqual(limit)
 
@@ -46,6 +48,8 @@ describe('02. Movie Lists', () => {
         const service = new MovieService(driver)
 
         const output = await service.all('imdbRating', 'DESC', 1)
+
+        console.log(output);
 
         expect(output).toBeDefined()
         expect(output.length).toEqual(1)
